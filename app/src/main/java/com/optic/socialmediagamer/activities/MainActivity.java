@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
     Button mButtonLogin;
     AuthProvider mAuthProvider;
     SignInButton mButtonGoogle;
-    private GoogleSignInClient mGoogleSignInClient;
+    public GoogleSignInClient mGoogleSignInClient;  // *********Cambiar a Private****Cliente de inicio de sesión con Google
     private final int REQUEST_CODE_GOOGLE = 1;
     AlertDialog mDialog;
     UsersProvider mUsersProvider;
@@ -166,7 +166,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // Método para iniciar sesión con email y contraseña
-    private void login() { // Método para iniciar sesión
+    public void login() { // Método para iniciar sesión   // *********Cambiar a Private****
         String email = mTextInputEmail.getText().toString();
         String password = mTextInputPassword.getText().toString();
 
